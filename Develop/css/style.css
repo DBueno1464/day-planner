@@ -33,7 +33,7 @@ textarea {
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;
+  border-top: 1px solid rgb(255, 255, 255);
 }
 
 .hour {
@@ -68,4 +68,31 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.card {
+  background-color: rgb(43, 40, 40);
+  font: white;
+}
+
+.left-block {
+  text-align: right; 
+  font-size: 30px;
+  color: white;
+}
+
+
+
+.right-block {
+  text-align: center;
+  color: white;
+}
+
+.pastBlocks {
+  background-color: grey;
+}
+
+
+.upcomingBlocks {
+  background-color: green;
 }

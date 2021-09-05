@@ -4,7 +4,7 @@
   A Calendar application that allows a user to save events for each hour of the day. The app will run in the browser and feature dynamically updated HTML and CSS powered by JQuery.
 
   ## Technologies
-  - momment.js
+  - moment.js
   - JQuery
   - Bootstrap
 
@@ -14,3 +14,6 @@
   ## Links:
   https://github.com/DBueno1464/day-planner
   https://dbueno1464.github.io/day-planner/Develop/html/index.html
+  
+  ## Screenshot
+  

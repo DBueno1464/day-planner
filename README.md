@@ -12,8 +12,8 @@
   Can plan your day by adding entries to each hour block. Content will be persist since it is stored locally. 
 
   ## Links:
-  https://github.com/DBueno1464/day-planner
-  https://dbueno1464.github.io/day-planner/Develop/html/index.html
+  - https://github.com/DBueno1464/day-planner
+  - https://dbueno1464.github.io/day-planner/Develop/html/index.html
   
   ## Screenshot
   

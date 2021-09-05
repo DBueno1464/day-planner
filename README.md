@@ -13,7 +13,7 @@
 
   ## Links:
   - https://github.com/DBueno1464/day-planner
-  - https://dbueno1464.github.io/day-planner/html/index.html
+  - https://dbueno1464.github.io/day-planner/index.html
   
   ## Screenshot
   ![image](https://user-images.githubusercontent.com/82502383/132119838-73f84e83-8302-4399-a73f-e7a51b025dfd.png)

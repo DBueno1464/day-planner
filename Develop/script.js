@@ -1,56 +1,66 @@
 const timeDisplayEl = $('#time-display');
 const midBlockEl = $('.mid-block');
-const timeBlockIDs = ["9-am-block", "10-am-block", "11-am-block", "12-pm-block", "1-pm-block", "2-pm-block", "3-pm-block", "4-pm-block", "5-pm-block"]
-const nineAM = $('9-am-block');
-const tenAM = $('10-am-block');
-const elevenAM = $('11-am-block');
-const twelveAM = $('12-pm-block');
-const onePM = $('1-pm-block');
-const twoPM = $('2-pm-block');
-const threePM = $('3-pm-block');
-const fourPM = $('4-pm-block');
-const fivePM = $('5-pm-block');
+
 
 
 const displayTime = () => {
     let rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
     timeDisplayEl.text(rightNow);
 };
-    
+
 const colorCodeTimeBlocks = () => {
-   
-    const arrayOfTimeBlocks = 
-     ["#9-am-block",
-      "#10-am-block",
-      "#11-am-block",
-      "#12-pm-block",
-      "#1-pm-block",
-      "#2-pm-block",
-      "#3-pm-block",
-      "#4-pm-block",
-      "#5-pm-block"
-];
+
+    const arrayOfTimeBlocks =
+        ["#9-am-block",
+            "#10-am-block",
+            "#11-am-block",
+            "#12-pm-block",
+            "#1-pm-block",
+            "#2-pm-block",
+            "#3-pm-block",
+            "#4-pm-block",
+            "#5-pm-block"
+        ];
 
     var now = new Date();
     var nowHours = now.getHours();
-    console.log(nowHours);
 
-    for ( var i = 0; i < nowHours - 9; i++){
+    for (var i = 0; i < nowHours - 9; i++) {
         let red = $(arrayOfTimeBlocks[i]).addClass("pastBlocks").removeClass("upcomingBlocks currentBlock");
-        console.log(i, arrayOfTimeBlocks[i],"for loop 1", red);
     };
 
-    for ( var j = nowHours - 9; j < nowHours - 8; j++) {
+    for (var j = nowHours - 9; j < nowHours - 8; j++) {
         let neutral = $(arrayOfTimeBlocks[j]).addClass("currentBlock").removeClass("upcomingBlocks pastBlocks");
-        console.log(j, arrayOfTimeBlocks[j],"for loop 2", neutral);
     };
 
-    for ( var k = nowHours - 8; k < arrayOfTimeBlocks.length; k++){
+    for (var k = nowHours - 8; k < arrayOfTimeBlocks.length; k++) {
         let green = $(arrayOfTimeBlocks[k]).addClass("upcomingBlocks").removeClass("pastBlocks currentBlock");
-        console.log(k, arrayOfTimeBlocks[k],"for loop 3", green);
     };
 
 };
+
+$('.btn').on("click", function addEntry () {
+
+    // Go from button to textarea
+    let entryText = $(this).siblings('.description').val();
+    // from button to id of whole card
+    let time = $(this).siblings('.mid-block').attr('id');
+
+    setTimeout(console.log(time, entryText), 3000);
+
+    localStorage.setItem(time, entryText);
+
+});
+
+$("#9am .description").val(localStorage.getItem("9-am-block"));
+$("#10am .description").val(localStorage.getItem("10-am-block"));
+$("#11am .description").val(localStorage.getItem("11-am-block"));
+$("#12pm .description").val(localStorage.getItem("12-pm-block"));
+$("#1pm .description").val(localStorage.getItem("1-pm-block"));
+$("#2pm .description").val(localStorage.getItem("2-pm-block"));
+$("#3pm .description").val(localStorage.getItem("3-pm-block"));
+$("#4pm .description").val(localStorage.getItem("4-pm-block"));
+$("#5pm .description").val(localStorage.getItem("5-pm-block"));
 
 colorCodeTimeBlocks();
 
